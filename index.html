@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+ <head>
+    <title>starry Night Animation Banner Effects</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+     <title>Document</title>
+ </head>
+ <body>
+     <div class="scene">
+         <div class="moon"></div>
+         <img src="./img/forest.png" alt="forest" class="forest">
+         <img src="./img/cloud1.png" alt="forest" class="cloud1">
+         <img src="./img/cloud2.png" alt="forest" class="cloud2">
+         <img src="./img/cloud3.png" alt="forest" class="cloud3">
+     </div>
+     <script type="text/javascript">
+        function stars(){
+            let count = 500;
+            let scene = document.querySelector('.scene');
+            let i = 0;
+            while(i < count){
+            let star = document.createElement("i");
+            let x = Math.floor(Math.random() * window.innerWidth);
+            let y = Math.floor(Math.random() * window.innerHeight);
+            let duration = Math.random() * 10;
+            let size = Math.random() * 2 ;
+            star.style.left = x+'px';
+            star.style.top = y+'px';
+            star.style.width = 1+size+'px';
+            star.style.height = 1+size+'px';
+            star.style.animationDuration = 5+duration+'s'
+            star.style.animationDelay = duration+'s'
+            scene.appendChild(star)
+            i++
+            }
+        }
+        stars()
+    </script>
+ </body>
+ </html>
+
+ <!--
+     NOTICE THAT "SCENE IS NOT DEFINED IN SCRIPT"
+ -->
